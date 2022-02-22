@@ -20,5 +20,6 @@ from fetchdata import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^ticket/', views.TicketListView.as_view())
+    re_path(r'^ticket/', views.TicketListView.as_view()),
+    re_path(r'^ticket/(?P<pk>\d+)/', views.TicketListView.as_view()),
 ]
